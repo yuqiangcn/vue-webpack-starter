@@ -1,6 +1,14 @@
 <template>
   <div id="app">
     <router-view />
+    <img src="./assets/logo.png" />
+    <h1>{{ msg }}</h1>
+    <p>
+      <router-link to="/">Home</router-link>
+      <router-link to="/about">About</router-link>
+      <router-link to="/contact">{{ $t("lang") }}</router-link>
+    </p>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -63,5 +71,24 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+h1,
+h2 {
+  font-weight: normal;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  color: #42b983;
 }
 </style>
